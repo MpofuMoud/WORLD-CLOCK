@@ -4,7 +4,7 @@ function updateTime() {
     let warsawDateElement = warsawElement.querySelector(".date");
     let warsawTimeElement = warsawElement.querySelector(".time");
     let warsawTime = moment().tz("Europe/Warsaw");
-    warsawDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    warsawDateElement.innerHTML = warsawTime.format("MMMM Do YYYY");
     warsawTimeElement.innerHTML = warsawTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
@@ -15,7 +15,7 @@ function updateTime() {
     let new_YorkDateElement = new_YorkElement.querySelector(".date");
     let new_YorkTimeElement = new_YorkElement.querySelector(".time");
     let new_YorkTime = moment().tz("America/New_York");
-    new_YorkDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    new_YorkDateElement.innerHTML = new_YorkTime.format("MMMM Do YYYY");
     new_YorkTimeElement.innerHTML = new_YorkTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
@@ -25,7 +25,7 @@ function updateTime() {
     let seoulDateElement = seoulElement.querySelector(".date");
     let seoulTimeElement = seoulElement.querySelector(".time");
     let seoulTime = moment().tz("Asia/Seoul");
-    seoulDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    seoulDateElement.innerHTML = seoulTime.format("MMMM Do YYYY");
     seoulTimeElement.innerHTML = seoulTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
@@ -35,7 +35,7 @@ function updateTime() {
     let harareDateElement = harareElement.querySelector(".date");
     let harareTimeElement = harareElement.querySelector(".time");
     let harareTime = moment().tz("Africa/Harare");
-    harareDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    harareDateElement.innerHTML = harareTime.format("MMMM Do YYYY");
     harareTimeElement.innerHTML = harareTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
