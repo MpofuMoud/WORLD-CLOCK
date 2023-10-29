@@ -10,19 +10,22 @@ function updateTime() {
     );
   }
 
-  let bulawayoElement = document.querySelector("#byo");
-  if (bulawayoElement) {
-    let bulawayoDateElement = bulawayoElement.querySelector(".date");
-    let bulawayoTimeElement = bulawayoElement.querySelector(".time");
-    let bulawayoTime = moment().tz("Africa/Bulawayo");
-    bulawayoDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    bulawayoTimeElement.innerHTML = bulawayoTime.format(
+  let harareElement = document.querySelector("#harare");
+  if (harareElement) {
+    let harareDateElement = harareElement.querySelector(".date");
+    let harareTimeElement = harareElement.querySelector(".time");
+    let harareTime = moment().tz("Africa/Harare");
+    harareDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    harareTimeElement.innerHTML = harareTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
