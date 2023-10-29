@@ -10,6 +10,26 @@ function updateTime() {
     );
   }
 
+  let new_YorkElement = document.querySelector("#new_York");
+  if (new_YorkElement) {
+    let new_YorkDateElement = new_YorkElement.querySelector(".date");
+    let new_YorkTimeElement = new_YorkElement.querySelector(".time");
+    let new_YorkTime = moment().tz("America/New_York");
+    new_YorkDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    new_YorkTimeElement.innerHTML = new_YorkTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let seoulElement = document.querySelector("#seoul");
+  if (seoulElement) {
+    let seoulDateElement = seoulElement.querySelector(".date");
+    let seoulTimeElement = seoulElement.querySelector(".time");
+    let seoulTime = moment().tz("Asia/Seoul");
+    seoulDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    seoulTimeElement.innerHTML = seoulTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
   let harareElement = document.querySelector("#harare");
   if (harareElement) {
     let harareDateElement = harareElement.querySelector(".date");
